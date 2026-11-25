@@ -2,10 +2,10 @@ name: Release (draft)
 # Pushing a tag builds installers and attaches them to a DRAFT release. Nothing is published until a maintainer publishes the draft by hand.
 on: { push: { tags: ['v*'] } }
 permissions: { contents: write }
-# Windows dropped: unsupported, and `npm run verify` fails there (see ci.yml).
+# macOS only: Windows fails `npm run verify` (see ci.yml), Linux is unsupported, and parallel jobs can create duplicate draft releases.
 jobs:
   package:
-    strategy: { fail-fast: false, matrix: { os: [macos-latest, ubuntu-latest] } }
+    strategy: { fail-fast: false, matrix: { os: [macos-latest] } }
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
