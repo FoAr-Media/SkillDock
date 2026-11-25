@@ -16,7 +16,7 @@ jobs:
       - name: checksums
         shell: bash
         run: cd release && (shasum -a 256 *.dmg *.zip *.exe *.AppImage *.deb 2>/dev/null || true) > SHA256SUMS-${{ matrix.os }}.txt
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           draft: true
           body: |
