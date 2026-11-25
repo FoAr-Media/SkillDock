@@ -1,0 +1,57 @@
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request: {}
+permissions: { contents: read }
+concurrency: { group: "ci-${{ github.ref }}", cancel-in-progress: true }
+jobs:
+  verify:
+    name: verify (${{ matrix.os }})
+    strategy: { fail-fast: false, matrix: { os: [macos-latest, windows-latest, ubuntu-latest] } }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc, cache: npm }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run licenses:check
+      - run: npm run build
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc, cache: npm }
+      - run: npm ci
+      - run: npm run audit:prod
+      - name: notices are up to date
+        run: node scripts/licenses.mjs notices && git diff --exit-code THIRD_PARTY_NOTICES.md
+  e2e-macos:
+    needs: verify
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc, cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - run: node tests/e2e/app.e2e.mjs
+      - run: node tests/qa/run.mjs
+      - run: node tests/e2e/a11y.e2e.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: e2e-evidence, path: "docs/qa\ndocs/screenshots\ndocs/e2e-results.json\ndocs/a11y-report.json" }
+  e2e-linux:
+    # Experimental: the application has not been run on Linux by the maintainers yet; failures here are informational.
+    needs: verify
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc, cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - run: xvfb-run --auto-servernum node tests/e2e/app.e2e.mjs

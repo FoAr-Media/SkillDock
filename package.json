@@ -1,0 +1,36 @@
+{
+  "name": "skilldock",
+  "private": true,
+  "type": "module",
+  "version": "0.2.1",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p packages/core --noEmit && tsc -p apps/desktop --noEmit",
+    "dev": "npm run dev -w @skilldock/desktop",
+    "build": "npm run build -w @skilldock/desktop",
+    "test:live": "SKILLDOCK_LIVE=1 vitest run packages/core/test/live.test.ts",
+    "test:e2e": "npm run build && node tests/e2e/app.e2e.mjs",
+    "package": "npm run package -w @skilldock/desktop",
+    "package:dir": "npm run package:dir -w @skilldock/desktop",
+    "licenses:check": "node scripts/licenses.mjs check",
+    "licenses:notices": "node scripts/licenses.mjs notices",
+    "audit:prod": "npm audit --omit=dev --audit-level=high",
+    "verify": "npm run typecheck && npm test && npm run licenses:check"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "axe-core": "^4.14.1",
+    "playwright-core": "^1.65.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "description": "Local-first desktop manager for Claude skills, MCP servers, plugins and configuration"
+}

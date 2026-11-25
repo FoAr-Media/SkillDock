@@ -1,0 +1,2 @@
+# Code of conduct
+We want this project to be a respectful, harassment-free space for everyone. Be kind, assume good faith, give and accept constructive feedback, and focus on the work. Harassment, discrimination, personal attacks, doxxing and publishing others' private information are not tolerated. Maintainers may edit or remove contributions and restrict participation that violates this. Report concerns privately to the maintainers through the repository's private reporting channel (see SECURITY.md for how that is set up).

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "B01",
+    "path": "assets/brand/logos/logo-primary.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_layered_diamond_logo.png"
+  },
+  {
+    "id": "B02",
+    "path": "assets/brand/logos/logo-dark.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_neon_logo.png"
+  },
+  {
+    "id": "B03",
+    "path": "assets/brand/logos/logo-light.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_purple_gradient_logo.png"
+  },
+  {
+    "id": "B04",
+    "path": "assets/brand/logos/symbol.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "glossy_purple_stacked_diamond_icon.png"
+  },
+  {
+    "id": "B05",
+    "path": "assets/brand/logos/logo-monochrome.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "monochrome_skilldock_logo.png"
+  },
+  {
+    "id": "B06",
+    "path": "assets/brand/icons/macos/icon-source.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "glossy_purple_skilldock_icon.png"
+  },
+  {
+    "id": "B07",
+    "path": "assets/brand/icons/windows/icon-source.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_purple_sparkle_icon.png"
+  },
+  {
+    "id": "B08",
+    "path": "assets/brand/icons/linux/icon-source.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "layered_violet_sparkle_app_icon.png"
+  },
+  {
+    "id": "B09",
+    "path": "assets/brand/tray/tray-icons-reference.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_system_tray_icon_set.png"
+  },
+  {
+    "id": "B10",
+    "path": "assets/brand/splash/splash-screen.png",
+    "width": 1672,
+    "height": 941,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_futuristic_ai_control_centre.png"
+  },
+  {
+    "id": "B11",
+    "path": "assets/brand/social/github-organization.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "layered_purple_sparkle_icon.png"
+  },
+  {
+    "id": "B12",
+    "path": "assets/brand/social/github-banner.png",
+    "width": 1774,
+    "height": 887,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_ai_workflow_control_centre.png"
+  },
+  {
+    "id": "B13",
+    "path": "assets/brand/web/favicon-reference.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_favicon_asset_presentation.png"
+  },
+  {
+    "id": "B14",
+    "path": "assets/brand/installer/welcome.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_welcome_installer_artwork.png"
+  },
+  {
+    "id": "B15",
+    "path": "assets/brand/social/profile-logo.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "neon_purple_layered_diamond_avatar.png"
+  },
+  {
+    "id": "B16",
+    "path": "assets/brand/social/social-cover.png",
+    "width": 1672,
+    "height": 941,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_ai_ecosystem_control_centre.png"
+  },
+  {
+    "id": "B17",
+    "path": "assets/brand/illustrations/empty-states.png",
+    "width": 1448,
+    "height": 1086,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_neon_dashboard_states.png"
+  },
+  {
+    "id": "B18",
+    "path": "assets/brand/references/brand-guidelines.png",
+    "width": 1055,
+    "height": 1491,
+    "format": "PNG",
+    "alpha": false,
+    "status": "generated raster reference",
+    "original_filename": "skilldock_brand_guidelines_poster.png"
+  }
+]

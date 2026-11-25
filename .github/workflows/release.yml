@@ -1,0 +1,30 @@
+name: Release (draft)
+# Pushing a tag builds installers and attaches them to a DRAFT release. Nothing is published until a maintainer publishes the draft by hand.
+on: { push: { tags: ['v*'] } }
+permissions: { contents: write }
+jobs:
+  package:
+    strategy: { fail-fast: false, matrix: { os: [macos-latest, windows-latest, ubuntu-latest] } }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc, cache: npm }
+      - run: npm ci
+      - run: npm run verify
+      - run: npm run package
+      - name: checksums
+        shell: bash
+        run: cd release && (shasum -a 256 *.dmg *.zip *.exe *.AppImage *.deb 2>/dev/null || true) > SHA256SUMS-${{ matrix.os }}.txt
+      - uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          body: |
+            Unsigned, not notarized builds. macOS: see "Installing the unsigned app" in the README. Windows/Linux packages are built by CI but have not been run by the maintainers.
+          files: |
+            release/*.dmg
+            release/*.zip
+            release/*.exe
+            release/*.AppImage
+            release/*.deb
+            release/SHA256SUMS-*.txt
