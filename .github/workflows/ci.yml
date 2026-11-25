@@ -40,7 +40,7 @@ jobs:
       - run: node tests/e2e/app.e2e.mjs
       - run: node tests/qa/run.mjs
       - run: node tests/e2e/a11y.e2e.mjs
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with: { name: e2e-evidence, path: "docs/qa\ndocs/screenshots\ndocs/e2e-results.json\ndocs/a11y-report.json" }
   e2e-linux:
