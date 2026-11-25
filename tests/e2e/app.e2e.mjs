@@ -362,7 +362,7 @@ await step('real system: detection + listing of the actual ~/.claude is read-onl
   const { mkdtemp } = await import('node:fs/promises'); const data = await mkdtemp(path.join(os.tmpdir(), 'skilldock-real-'))
   const { _electron } = await import('playwright-core'); const a = await _electron.launch({ args: [path.join(root, 'apps/desktop')], env: { ...process.env, SKILLDOCK_DATA_DIR: data } }); const w = await a.firstWindow()
   await w.waitForSelector('text=Welcome to SkillDock', { timeout: 20000 }); await w.click('text=Continue'); await w.waitForSelector('.cards'); const t = (await w.innerText('.cards')).replace(/\n/g, ' ')
-  const n = +/(\d+) Skills/.exec(t)[1]; assert.ok(n >= names.length - 5 && n > 0, `real skills counted: ${t}`)
+  const n = +/(\d+) Skills/.exec(t)[1]; assert.ok(n >= names.length - 5 && (names.length === 0 || n > 0), `real skills counted: ${t}`) // CI runners have no ~/.claude
   await a.close() // (deliberately no screenshot: it would show the real machine's paths)
   assert.equal(existsSync(path.join(realClaude, 'settings.json')) ? await read(path.join(realClaude, 'settings.json')) : '', before, 'real settings.json untouched')
   assert.deepEqual((await readdir(path.join(realClaude, 'skills')).catch(() => [])).sort(), names.sort(), 'real skills dir untouched')
