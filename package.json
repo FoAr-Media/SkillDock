@@ -23,7 +23,7 @@
     "verify": "npm run typecheck && npm test && npm run licenses:check"
   },
   "devDependencies": {
-    "@types/node": "^22",
+    "@types/node": "^26",
     "axe-core": "^4.14.1",
     "playwright-core": "^1.65.1",
     "typescript": "^7.0.2",
