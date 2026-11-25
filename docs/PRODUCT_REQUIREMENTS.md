@@ -1,0 +1,2 @@
+# Product requirements (summary of the project brief; status lives in PROGRESS.md)
+Local-first, no account/backend/LLM required, non-destructive, transparent, security-by-design, cross-platform (macOS first). Manage skills, MCP servers, plugins, commands, agents, hooks, instructions, configuration, presets, organization catalogs; marketplace discovery from public sources; transactional installs with reviewed plans; Skill Studio; backups/recovery; no payments; independent community project, not an Anthropic app.

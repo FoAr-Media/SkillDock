@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-24T22:04:29.599Z",
+  "scanned": 37,
+  "seriousOrCritical": [],
+  "minorOrModerate": [
+    {
+      "page": "Resource page [dark]",
+      "id": "heading-order",
+      "impact": "moderate",
+      "n": 1,
+      "sample": "h4"
+    },
+    {
+      "page": "Install plan dialog [dark]",
+      "id": "heading-order",
+      "impact": "moderate",
+      "n": 1,
+      "sample": ".tabbody > h4"
+    }
+  ]
+}

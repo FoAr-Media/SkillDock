@@ -1,0 +1,12 @@
+appId: dev.skilldock.app
+productName: SkillDock
+directories: { output: ../../release, buildResources: build }
+files: ['out/**', 'package.json']
+extraResources: [{ from: build/icon.png, to: icon.png }, { from: ../../THIRD_PARTY_NOTICES.md, to: THIRD_PARTY_NOTICES.md }, { from: ../../LICENSE, to: LICENSE }]
+copyright: Copyright © 2026 SkillDock contributors
+asar: true
+mac: { icon: build/icon.icns, target: [{ target: dmg, arch: [arm64, x64] }, { target: zip, arch: [arm64, x64] }], category: public.app-category.developer-tools, hardenedRuntime: false, identity: null }
+win: { icon: build/icon.ico, target: [{ target: nsis, arch: [x64] }] }
+nsis: { oneClick: false, allowToChangeInstallationDirectory: true }
+linux: { icon: build/icons, target: [AppImage, deb], category: Development, maintainer: SkillDock contributors }
+publish: null

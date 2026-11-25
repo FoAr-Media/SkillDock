@@ -1,0 +1,305 @@
+{
+  "at": "2026-11-24T13:53:42.393Z",
+  "authenticated": false,
+  "budgetBefore": {
+    "limit": 60,
+    "remaining": 31,
+    "reset": 1795531901,
+    "used": 29
+  },
+  "areas": {
+    "video production": [
+      {
+        "repo": "remotion-dev/skills",
+        "stars": 7925,
+        "license": null,
+        "archived": false,
+        "pushedAt": "2026-11-23T09:56:56Z",
+        "commit": "89c8afa3ee",
+        "mode": "full",
+        "skills": 13,
+        "mirroredCollapsed": 0,
+        "mirrorCopies": 0,
+        "plugins": 0,
+        "notInstallable": 0,
+        "categories": {
+          "Video creation": 13,
+          "Video editing": 1,
+          "Documentation": 1
+        },
+        "ms": 2003
+      },
+      {
+        "repo": "digitalsamba/claude-code-video-toolkit",
+        "stars": 2742,
+        "license": "MIT",
+        "archived": false,
+        "pushedAt": "2026-11-23T22:49:26Z",
+        "commit": "b3437fcd46",
+        "mode": "full",
+        "skills": 17,
+        "mirroredCollapsed": 0,
+        "mirrorCopies": 0,
+        "plugins": 0,
+        "notInstallable": 0,
+        "categories": {
+          "Audio production": 15,
+          "Video creation": 17,
+          "Video editing": 7,
+          "Graphic design": 1,
+          "UI/UX design": 3,
+          "Software development": 2,
+          "Browser automation": 1,
+          "Testing": 2,
+          "DevOps": 1,
+          "Cloud infrastructure": 1,
+          "Social media": 1
+        },
+        "ms": 1413
+      }
+    ],
+    "development": [
+      {
+        "repo": "addyosmani/agent-skills",
+        "stars": 120126,
+        "license": "MIT",
+        "archived": false,
+        "pushedAt": "2026-11-24T07:11:17Z",
+        "commit": "e997ac5b9a",
+        "mode": "full",
+        "skills": 26,
+        "mirroredCollapsed": 0,
+        "mirrorCopies": 0,
+        "plugins": 1,
+        "notInstallable": 0,
+        "categories": {
+          "Software development": 6,
+          "Backend development": 1,
+          "Frontend development": 2,
+          "UI/UX design": 2,
+          "Testing": 3,
+          "Browser automation": 1,
+          "Workflow automation": 1,
+          "DevOps": 1,
+          "Database management": 1,
+          "Documentation": 2,
+          "Productivity": 3,
+          "Cybersecurity": 1
+        },
+        "ms": 1214
+      },
+      {
+        "repo": "obra/superpowers",
+        "stars": 325613,
+        "license": "MIT",
+        "archived": false,
+        "pushedAt": "2026-11-03T23:24:58Z",
+        "commit": "22f0b463e7",
+        "mode": "full",
+        "skills": 15,
+        "mirroredCollapsed": 0,
+        "mirrorCopies": 0,
+        "plugins": 1,
+        "notInstallable": 0,
+        "categories": {
+          "Software development": 5,
+          "Productivity": 3,
+          "Testing": 1,
+          "Content creation": 2
+        },
+        "ms": 1508
+      }
+    ],
+    "productivity": [
+      {
+        "repo": "obsidianmd/obsidian-skills",
+        "stars": 53604,
+        "license": "MIT",
+        "archived": false,
+        "pushedAt": "2026-11-20T19:22:47Z",
+        "commit": "b110b2f8e9",
+        "mode": "full",
+        "skills": 7,
+        "mirroredCollapsed": 0,
+        "mirrorCopies": 0,
+        "plugins": 1,
+        "notInstallable": 0,
+        "categories": {
+          "Productivity": 7,
+          "Graphic design": 1
+        },
+        "ms": 1192
+      },
+      {
+        "repo": "OthmanAdi/planning-with-files",
+        "stars": 28217,
+        "license": "MIT",
+        "archived": false,
+        "pushedAt": "2026-11-23T11:57:04Z",
+        "commit": "aaa38bc620",
+        "mode": "full",
+        "skills": 6,
+        "mirroredCollapsed": 1,
+        "mirrorCopies": 12,
+        "plugins": 1,
+        "notInstallable": 0,
+        "categories": {
+          "Productivity": 6,
+          "Software development": 6
+        },
+        "ms": 1127
+      }
+    ],
+    "design": [
+      {
+        "repo": "pbakaus/impeccable",
+        "stars": 116014,
+        "license": "Apache-2.0",
+        "archived": false,
+        "pushedAt": "2026-11-24T09:20:08Z",
+        "commit": "b49177d327",
+        "mode": "full",
+        "skills": 4,
+        "mirroredCollapsed": 2,
+        "mirrorCopies": 22,
+        "plugins": 1,
+        "notInstallable": 0,
+        "categories": {
+          "UI/UX design": 2,
+          "Testing": 2
+        },
+        "ms": 1374
+      },
+      {
+        "repo": "anthropics/skills",
+        "stars": 199724,
+        "license": null,
+        "archived": false,
+        "pushedAt": "2026-11-16T14:22:50Z",
+        "commit": "e4bb5d960d",
+        "mode": "full",
+        "skills": 20,
+        "mirroredCollapsed": 0,
+        "mirrorCopies": 0,
+        "plugins": 5,
+        "notInstallable": 0,
+        "categories": {
+          "Productivity": 4,
+          "Documentation": 2,
+          "UI/UX design": 2,
+          "Graphic design": 1,
+          "Backend development": 1,
+          "Content creation": 2,
+          "Office documents": 3,
+          "Frontend development": 2,
+          "Business operations": 1,
+          "Video creation": 1,
+          "Testing": 1,
+          "Browser automation": 1,
+          "Spreadsheet automation": 1
+        },
+        "ms": 1150
+      }
+    ],
+    "search": {
+      "video": 31,
+      "remotion": 30,
+      "frontend": 10,
+      "obsidian": 8,
+      "planning": 10
+    }
+  },
+  "notes": [
+    "impeccable: 4 listed after collapsing mirrors",
+    "huge-repository check skipped: only 5 API calls left"
+  ],
+  "facets": {
+    "types": {
+      "skill": 108,
+      "plugin": 10
+    },
+    "topCategories": [
+      [
+        "Video creation",
+        31
+      ],
+      [
+        "Productivity",
+        25
+      ],
+      [
+        "Software development",
+        22
+      ],
+      [
+        "Audio production",
+        15
+      ],
+      [
+        "UI/UX design",
+        10
+      ],
+      [
+        "Testing",
+        9
+      ],
+      [
+        "Video editing",
+        8
+      ],
+      [
+        "Documentation",
+        5
+      ],
+      [
+        "Frontend development",
+        4
+      ],
+      [
+        "Content creation",
+        4
+      ],
+      [
+        "Office documents",
+        4
+      ],
+      [
+        "Graphic design",
+        3
+      ]
+    ],
+    "licenses": {
+      "MIT": 75,
+      "Apache-2.0": 5
+    }
+  },
+  "detail": {
+    "entry": "skill:remotion-dev/skills:skills/remotion-best-practices",
+    "headings": 18,
+    "examples": 3
+  },
+  "install": {
+    "entry": "skill:remotion-dev/skills:skills/remotion-best-practices",
+    "files": 130,
+    "security": "review-recommended",
+    "findings": 230,
+    "nameConflicts": 0
+  },
+  "search": {
+    "topic": "claude-skills",
+    "candidates": 10,
+    "first": "thedotmack/claude-mem"
+  },
+  "mcp": {
+    "query": "video",
+    "results": 8,
+    "installable": 8
+  },
+  "budgetAfter": {
+    "limit": 60,
+    "remaining": 5,
+    "reset": 1795531901,
+    "used": 55
+  },
+  "apiCallsUsed": 26
+}

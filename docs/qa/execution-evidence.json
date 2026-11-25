@@ -1,0 +1,1061 @@
+{
+  "at": "2026-11-24T22:09:06.717Z",
+  "evidence": [
+    {
+      "id": "A-01",
+      "persona": "A",
+      "title": "First launch: read-only onboarding",
+      "expected": "Welcome dialog states the scan is read-only and lists detected components; nothing written",
+      "channel": "ui",
+      "notes": [
+        "onboarding shown, no files created"
+      ],
+      "status": "pass",
+      "ms": 123,
+      "actual": "onboarding shown, no files created",
+      "screenshot": "screenshots/A-01.png"
+    },
+    {
+      "id": "A-02",
+      "persona": "A",
+      "title": "Discover skills in the marketplace",
+      "expected": "Marketplace refreshes the official sources and lists the three skills",
+      "channel": "ui",
+      "notes": [
+        "3 skills listed from mock official source"
+      ],
+      "status": "pass",
+      "ms": 59,
+      "actual": "3 skills listed from mock official source",
+      "screenshot": "screenshots/A-02.png"
+    },
+    {
+      "id": "A-03",
+      "persona": "A",
+      "title": "Category filter: Video editing",
+      "expected": "Exactly the video skill remains",
+      "channel": "ui",
+      "notes": [
+        "1 tile: video-maker"
+      ],
+      "status": "pass",
+      "ms": 15,
+      "actual": "1 tile: video-maker",
+      "screenshot": "screenshots/A-03.png"
+    },
+    {
+      "id": "A-04",
+      "persona": "A",
+      "title": "Understand the skill before installing",
+      "expected": "Resource page shows description, repo-level stars, usage, docs, files, plain-language security status",
+      "channel": "ui",
+      "notes": [
+        "overview, docs, security explanation readable"
+      ],
+      "status": "pass",
+      "ms": 145,
+      "actual": "overview, docs, security explanation readable",
+      "screenshot": "screenshots/A-04.png"
+    },
+    {
+      "id": "A-05",
+      "persona": "A",
+      "title": "Install the skill through the reviewed plan",
+      "expected": "Plan lists exact files, nothing written until approved; after approval files exist and only that skill was installed",
+      "channel": "ui",
+      "notes": [
+        "files verified on disk; sibling skills untouched"
+      ],
+      "status": "pass",
+      "ms": 277,
+      "actual": "files verified on disk; sibling skills untouched",
+      "screenshot": "screenshots/A-05.png"
+    },
+    {
+      "id": "A-06",
+      "persona": "A",
+      "title": "Learn how to invoke it",
+      "expected": "Commands tab shows /video-maker and Copy puts it on the clipboard",
+      "channel": "ui",
+      "notes": [
+        "invocation shown and copied"
+      ],
+      "status": "pass",
+      "ms": 168,
+      "actual": "invocation shown and copied",
+      "screenshot": "screenshots/A-06.png"
+    },
+    {
+      "id": "A-07",
+      "persona": "A",
+      "title": "Uninstall it again",
+      "expected": "Confirmation, removal, and a recoverable backup",
+      "channel": "ui",
+      "notes": [
+        "removed; backup listed"
+      ],
+      "status": "pass",
+      "ms": 398,
+      "actual": "removed; backup listed",
+      "screenshot": "screenshots/A-07.png"
+    },
+    {
+      "id": "A-08",
+      "persona": "A",
+      "title": "Network drops during download",
+      "expected": "Clear error, no partial install, no staging residue",
+      "channel": "ui",
+      "notes": [
+        "error shown: TypeError: fetch failed"
+      ],
+      "status": "pass",
+      "ms": 120,
+      "actual": "error shown: TypeError: fetch failed",
+      "screenshot": "screenshots/A-08.png"
+    },
+    {
+      "id": "A-09",
+      "persona": "A",
+      "title": "Marketplace refresh while GitHub is unreachable",
+      "expected": "Error is reported, cached listings stay browsable, recovery works",
+      "channel": "ui",
+      "notes": [
+        "cached tiles still visible",
+        "recovered after network returned"
+      ],
+      "status": "pass",
+      "ms": 5506,
+      "actual": "cached tiles still visible · recovered after network returned",
+      "screenshot": "screenshots/A-09.png"
+    },
+    {
+      "id": "A-runtime",
+      "persona": "A",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "B-01",
+      "persona": "B",
+      "title": "Register two projects (explicit, no disk scan)",
+      "expected": "Both listed once; duplicate registration is idempotent; invalid paths refused",
+      "channel": "ui+ipc",
+      "notes": [
+        "2 projects; non-existent and file paths rejected"
+      ],
+      "status": "pass",
+      "ms": 48,
+      "actual": "2 projects; non-existent and file paths rejected",
+      "screenshot": "screenshots/B-01.png"
+    },
+    {
+      "id": "B-02",
+      "persona": "B",
+      "title": "Global skill vs project skill install",
+      "expected": "Same skill installs globally and into a chosen project without cross-contamination",
+      "channel": "ui",
+      "notes": [
+        "user + project 1 only"
+      ],
+      "status": "pass",
+      "ms": 1333,
+      "actual": "user + project 1 only",
+      "screenshot": "screenshots/B-02.png"
+    },
+    {
+      "id": "B-03",
+      "persona": "B",
+      "title": "Duplicate resources are not silently overwritten",
+      "expected": "Re-installing needs explicit overwrite; duplicate MCP name / agent / project refused",
+      "channel": "ui+ipc",
+      "notes": [
+        "skill: overwrite gated",
+        "MCP rename onto existing name refused",
+        "duplicate agent refused"
+      ],
+      "status": "pass",
+      "ms": 494,
+      "actual": "skill: overwrite gated · MCP rename onto existing name refused · duplicate agent refused",
+      "screenshot": "screenshots/B-03.png"
+    },
+    {
+      "id": "B-04",
+      "persona": "B",
+      "title": "Add a project MCP server through the wizard",
+      "expected": "Server written to project .mcp.json, shown as pending approval (never auto-approved)",
+      "channel": "ui",
+      "notes": [
+        "written + pending approval"
+      ],
+      "status": "pass",
+      "ms": 307,
+      "actual": "written + pending approval",
+      "screenshot": "screenshots/B-04.png"
+    },
+    {
+      "id": "B-05",
+      "persona": "B",
+      "title": "Update detection and local-modification guard",
+      "expected": "Update found; locally edited skill is never silently overwritten",
+      "channel": "ui",
+      "notes": [
+        "local edit preserved until explicit overwrite"
+      ],
+      "status": "pass",
+      "ms": 412,
+      "actual": "local edit preserved until explicit overwrite",
+      "screenshot": "screenshots/B-05.png"
+    },
+    {
+      "id": "B-06",
+      "persona": "B",
+      "title": "Preset review with partially missing items",
+      "expected": "Plan lists what exists and honestly reports what does not; installs nothing by itself",
+      "channel": "ui",
+      "notes": [
+        "errors for missing preset items are shown, not hidden"
+      ],
+      "status": "pass",
+      "ms": 89,
+      "actual": "errors for missing preset items are shown, not hidden",
+      "screenshot": "screenshots/B-06.png"
+    },
+    {
+      "id": "B-07",
+      "persona": "B",
+      "title": "Configuration conflicts visible",
+      "expected": "Project settings model overrides user value and is flagged as a conflict",
+      "channel": "ui",
+      "notes": [
+        "model conflict flagged"
+      ],
+      "status": "pass",
+      "ms": 129,
+      "actual": "model conflict flagged",
+      "screenshot": "screenshots/B-07.png"
+    },
+    {
+      "id": "B-runtime",
+      "persona": "B",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "C-01",
+      "persona": "C",
+      "title": "Mirrored tool-folder copies appear once",
+      "expected": "One listing with a mirror badge instead of four",
+      "channel": "ui",
+      "notes": [
+        "1 tile, +3 mirrors"
+      ],
+      "status": "pass",
+      "ms": 134,
+      "actual": "1 tile, +3 mirrors",
+      "screenshot": "screenshots/C-01.png"
+    },
+    {
+      "id": "C-02",
+      "persona": "C",
+      "title": "Dependencies are detected",
+      "expected": "Resource page shows complexity \"complex\" and requirements.txt",
+      "channel": "ui",
+      "notes": [
+        "deps detected: requirements.txt"
+      ],
+      "status": "pass",
+      "ms": 154,
+      "actual": "deps detected: requirements.txt",
+      "screenshot": "screenshots/C-02.png"
+    },
+    {
+      "id": "C-03",
+      "persona": "C",
+      "title": "Root-level / oversized skill is not auto-installable",
+      "expected": "Install button disabled with the reason",
+      "channel": "ui",
+      "notes": [
+        "disabled with reason"
+      ],
+      "status": "pass",
+      "ms": 152,
+      "actual": "disabled with reason",
+      "screenshot": "screenshots/C-03.png"
+    },
+    {
+      "id": "C-04",
+      "persona": "C",
+      "title": "Huge repository: index-only, lazy details",
+      "expected": "Listed from tree with \"details load when opened\"; opening loads the real description",
+      "channel": "ui",
+      "notes": [
+        "index-only entry completed lazily"
+      ],
+      "status": "pass",
+      "ms": 167,
+      "actual": "index-only entry completed lazily",
+      "screenshot": "screenshots/C-04.png"
+    },
+    {
+      "id": "C-05",
+      "persona": "C",
+      "title": "Install ONE skill from a multi-skill repository",
+      "expected": "Only the chosen skill lands on disk",
+      "channel": "ui",
+      "notes": [
+        "only pdf installed"
+      ],
+      "status": "pass",
+      "ms": 496,
+      "actual": "only pdf installed",
+      "screenshot": "screenshots/C-05.png"
+    },
+    {
+      "id": "C-06",
+      "persona": "C",
+      "title": "Create a custom content-production preset and review its plan",
+      "expected": "Saved preset; plan lists items and reports missing ones",
+      "channel": "ui",
+      "notes": [
+        "plan: pdf ok, nope reported as failed"
+      ],
+      "status": "pass",
+      "ms": 316,
+      "actual": "plan: pdf ok, nope reported as failed",
+      "screenshot": "screenshots/C-06.png"
+    },
+    {
+      "id": "C-07",
+      "persona": "C",
+      "title": "Duplicate skill names inside one repository",
+      "expected": "Both entries are listed and distinguishable by path",
+      "channel": "ui",
+      "notes": [
+        "2 same-named entries listed (paths differ)"
+      ],
+      "status": "pass",
+      "ms": 92,
+      "actual": "2 same-named entries listed (paths differ)",
+      "screenshot": "screenshots/C-07.png"
+    },
+    {
+      "id": "C-runtime",
+      "persona": "C",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "D-01",
+      "persona": "D",
+      "title": "Create a skill from a template and save it",
+      "expected": "Valid skill saved, backed up, discoverable",
+      "channel": "ui",
+      "notes": [
+        "saved + listed"
+      ],
+      "status": "pass",
+      "ms": 190,
+      "actual": "saved + listed",
+      "screenshot": "screenshots/D-01.png"
+    },
+    {
+      "id": "D-02",
+      "persona": "D",
+      "title": "Invalid frontmatter blocks saving",
+      "expected": "Save disabled with a clear validation error",
+      "channel": "ui",
+      "notes": [
+        "save blocked"
+      ],
+      "status": "pass",
+      "ms": 896,
+      "actual": "save blocked",
+      "screenshot": "screenshots/D-02.png"
+    },
+    {
+      "id": "D-03",
+      "persona": "D",
+      "title": "Path traversal in a new file name",
+      "expected": "Rejected with a message; nothing written outside the skill",
+      "channel": "ui",
+      "notes": [
+        "traversal rejected"
+      ],
+      "status": "pass",
+      "ms": 125,
+      "actual": "traversal rejected",
+      "screenshot": "screenshots/D-03.png"
+    },
+    {
+      "id": "D-04",
+      "persona": "D",
+      "title": "Risky script gets flagged by static validation",
+      "expected": "Validation warns about piping a download into a shell",
+      "channel": "ui",
+      "notes": [
+        "warning shown"
+      ],
+      "status": "pass",
+      "ms": 952,
+      "actual": "warning shown",
+      "screenshot": "screenshots/D-04.png"
+    },
+    {
+      "id": "D-05",
+      "persona": "D",
+      "title": "Overwriting an existing skill is explicit",
+      "expected": "Saving over qa-review asks for confirmation",
+      "channel": "ui",
+      "notes": [
+        "overwrite confirmation shown"
+      ],
+      "status": "pass",
+      "ms": 344,
+      "actual": "overwrite confirmation shown",
+      "screenshot": "screenshots/D-05.png"
+    },
+    {
+      "id": "D-06",
+      "persona": "D",
+      "title": "Version history: restore an earlier version",
+      "expected": "Backup of the previous version can be restored from the skill",
+      "channel": "ui",
+      "notes": [
+        "second version rolled back"
+      ],
+      "status": "pass",
+      "ms": 751,
+      "actual": "second version rolled back",
+      "screenshot": "screenshots/D-06.png"
+    },
+    {
+      "id": "D-07",
+      "persona": "D",
+      "title": "Real Claude execution needs the system dialog",
+      "expected": "Denying the dialog prevents execution",
+      "channel": "ui+ipc",
+      "notes": [
+        "denied → not executed"
+      ],
+      "status": "pass",
+      "ms": 3,
+      "actual": "denied → not executed",
+      "screenshot": "screenshots/D-07.png"
+    },
+    {
+      "id": "D-08",
+      "persona": "D",
+      "title": "Externally broken SKILL.md",
+      "expected": "Listed as invalid; Studio refuses to treat it as valid; app keeps working",
+      "channel": "ui",
+      "notes": [
+        "flagged invalid in the list"
+      ],
+      "status": "pass",
+      "ms": 52,
+      "actual": "flagged invalid in the list",
+      "screenshot": "screenshots/D-08.png"
+    },
+    {
+      "id": "D-09",
+      "persona": "D",
+      "title": "Permission error while saving (read-only skills folder)",
+      "expected": "Save fails with an error, the original is intact, no partial files",
+      "channel": "ui",
+      "notes": [
+        "error: EACCES: permission denied, unlink '/var/folders/0v/yd4lc97j1t57mlgp0shcxccw0000gn/T/skilldock-e2e-nGGuS9/home/",
+        "original content intact"
+      ],
+      "status": "pass",
+      "ms": 493,
+      "actual": "error: EACCES: permission denied, unlink '/var/folders/0v/yd4lc97j1t57mlgp0shcxccw0000gn/T/skilldock-e2e-nGGuS9/home/ · original content intact",
+      "screenshot": "screenshots/D-09.png"
+    },
+    {
+      "id": "D-10",
+      "persona": "D",
+      "title": "Export a skill to a chosen folder",
+      "status": "not-executed",
+      "actual": "NOT EXECUTED: needs the native folder-picker dialog, which Playwright cannot drive; lossless export is unit-tested (exportSkillDir)",
+      "expected": "—",
+      "notes": [],
+      "channel": "-"
+    },
+    {
+      "id": "D-runtime",
+      "persona": "D",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "E-01",
+      "persona": "E",
+      "title": "Connect a catalog",
+      "expected": "Catalog shows pinned versions, checksum state and \"signature present (not verified)\"",
+      "channel": "ui",
+      "notes": [
+        "connected Acme v7"
+      ],
+      "status": "pass",
+      "ms": 94,
+      "actual": "connected Acme v7",
+      "screenshot": "screenshots/E-01.png"
+    },
+    {
+      "id": "E-02",
+      "persona": "E",
+      "title": "Checksum mismatch blocks install",
+      "expected": "Install refused with a checksum error",
+      "channel": "ui",
+      "notes": [
+        "blocked"
+      ],
+      "status": "pass",
+      "ms": 50,
+      "actual": "blocked",
+      "screenshot": "screenshots/E-02.png"
+    },
+    {
+      "id": "E-03",
+      "persona": "E",
+      "title": "Install a pinned resource",
+      "expected": "Plan names the organization; installed state shows current",
+      "channel": "ui",
+      "notes": [
+        "installed, current"
+      ],
+      "status": "pass",
+      "ms": 257,
+      "actual": "installed, current",
+      "screenshot": "screenshots/E-03.png"
+    },
+    {
+      "id": "E-04",
+      "persona": "E",
+      "title": "Catalog publishes a new pinned version",
+      "expected": "After refresh the resource shows \"update\" and reinstall requires overwrite confirmation",
+      "channel": "ui",
+      "notes": [
+        "update badge shown"
+      ],
+      "status": "pass",
+      "ms": 39,
+      "actual": "update badge shown",
+      "screenshot": "screenshots/E-04.png"
+    },
+    {
+      "id": "E-05",
+      "persona": "E",
+      "title": "Invalid catalogs are rejected",
+      "expected": "Each malformed manifest gives an error and nothing is stored",
+      "channel": "ui",
+      "notes": [
+        "bad json: SyntaxError: Expected property name or '}' in JSON at position 2 (line",
+        "missing fields: organization Invalid input: expected object, received undefined; resou",
+        "duplicate ids: Duplicate resource id a"
+      ],
+      "status": "pass",
+      "ms": 16406,
+      "actual": "bad json: SyntaxError: Expected property name or '}' in JSON at position 2 (line · missing fields: organization Invalid input: expected object, received undefined; resou · duplicate ids: Duplicate resource id a",
+      "screenshot": "screenshots/E-05.png"
+    },
+    {
+      "id": "E-06",
+      "persona": "E",
+      "title": "Managed policy is respected",
+      "expected": "Managed settings are read-only; a managed hook lock is reflected",
+      "channel": "ui+ipc",
+      "notes": [
+        "read-only + lock banner"
+      ],
+      "status": "pass",
+      "ms": 139,
+      "actual": "read-only + lock banner",
+      "screenshot": "screenshots/E-06.png"
+    },
+    {
+      "id": "E-07",
+      "persona": "E",
+      "title": "Private repository without a token",
+      "expected": "Clear \"not found / private without a token\" message",
+      "channel": "ui",
+      "notes": [
+        "message mentions private repos / token"
+      ],
+      "status": "pass",
+      "ms": 402,
+      "actual": "message mentions private repos / token",
+      "screenshot": "screenshots/E-07.png"
+    },
+    {
+      "id": "E-08",
+      "persona": "E",
+      "title": "Disconnect the catalog",
+      "expected": "Installed skills stay; catalog link removed",
+      "channel": "ui",
+      "notes": [
+        "catalog gone, pdf kept"
+      ],
+      "status": "pass",
+      "ms": 103,
+      "actual": "catalog gone, pdf kept",
+      "screenshot": "screenshots/E-08.png"
+    },
+    {
+      "id": "E-runtime",
+      "persona": "E",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "F-01",
+      "persona": "F",
+      "title": "Suspicious repository needs explicit approval",
+      "expected": "High-risk plan: install disabled until acknowledged; cancel leaves disk untouched",
+      "channel": "ui",
+      "notes": [
+        "blocked, cancelled cleanly"
+      ],
+      "status": "pass",
+      "ms": 608,
+      "actual": "blocked, cancelled cleanly",
+      "screenshot": "screenshots/F-01.png"
+    },
+    {
+      "id": "F-02",
+      "persona": "F",
+      "title": "Malicious archive paths",
+      "expected": "Each hostile path is rejected before anything is written; nothing escapes staging",
+      "channel": "ui",
+      "notes": [
+        "dot-dot path: rejected",
+        "backslash path: rejected",
+        "NUL byte path: rejected"
+      ],
+      "status": "pass",
+      "ms": 17186,
+      "actual": "dot-dot path: rejected · backslash path: rejected · NUL byte path: rejected",
+      "screenshot": "screenshots/F-02.png"
+    },
+    {
+      "id": "F-03",
+      "persona": "F",
+      "title": "Symlink and submodule entries",
+      "expected": "Skipped and reported; never materialised",
+      "channel": "ui",
+      "notes": [
+        "2 skipped; ok.md installed"
+      ],
+      "status": "pass",
+      "ms": 624,
+      "actual": "2 skipped; ok.md installed",
+      "screenshot": "screenshots/F-03.png"
+    },
+    {
+      "id": "F-04",
+      "persona": "F",
+      "title": "Oversized file / too many files",
+      "expected": "Rejected with the reason",
+      "channel": "ui",
+      "notes": [
+        "big file: skills/bigfile/data.bin exceeds 2097152 bytes",
+        "311 files rejected"
+      ],
+      "status": "pass",
+      "ms": 5912,
+      "actual": "big file: skills/bigfile/data.bin exceeds 2097152 bytes · 311 files rejected",
+      "screenshot": "screenshots/F-04.png"
+    },
+    {
+      "id": "F-05",
+      "persona": "F",
+      "title": "Secrets stay masked everywhere",
+      "expected": "No secret in the DOM, MCP payload, activity log or exports",
+      "channel": "ui+ipc",
+      "notes": [
+        "DOM, mcp:list, activity log and export are secret-free"
+      ],
+      "status": "pass",
+      "ms": 53,
+      "actual": "DOM, mcp:list, activity log and export are secret-free",
+      "screenshot": "screenshots/F-05.png"
+    },
+    {
+      "id": "F-06",
+      "persona": "F",
+      "title": "MCP start needs approval; denial spawns nothing",
+      "expected": "No process, no side effect when the system dialog is denied",
+      "channel": "ui+ipc",
+      "notes": [
+        "denied, nothing spawned"
+      ],
+      "status": "pass",
+      "ms": 2,
+      "actual": "denied, nothing spawned",
+      "screenshot": "screenshots/F-06.png"
+    },
+    {
+      "id": "F-07",
+      "persona": "F",
+      "title": "A server that never answers",
+      "expected": "Test times out with a diagnostic and the child process is killed",
+      "channel": "ui+ipc",
+      "notes": [
+        "timed out after 18s, no orphan"
+      ],
+      "status": "pass",
+      "ms": 17850,
+      "actual": "timed out after 18s, no orphan",
+      "screenshot": "screenshots/F-07.png"
+    },
+    {
+      "id": "F-08",
+      "persona": "F",
+      "title": "Permission error during install → rollback",
+      "expected": "Install fails, previous state kept, no partial skill, backup recorded",
+      "channel": "ui",
+      "notes": [
+        "error: Install failed and was rolled back: EACCES: permission denied, mkdir '/var/folders/0v/yd4lc97j1t57mlgp0shcxccw"
+      ],
+      "status": "pass",
+      "ms": 629,
+      "actual": "error: Install failed and was rolled back: EACCES: permission denied, mkdir '/var/folders/0v/yd4lc97j1t57mlgp0shcxccw",
+      "screenshot": "screenshots/F-08.png"
+    },
+    {
+      "id": "F-09",
+      "persona": "F",
+      "title": "Backup recovery after a mistaken uninstall",
+      "expected": "Restore brings the skill back",
+      "channel": "ui",
+      "notes": [
+        "t4 restored"
+      ],
+      "status": "pass",
+      "ms": 813,
+      "actual": "t4 restored",
+      "screenshot": "screenshots/F-09.png"
+    },
+    {
+      "id": "F-10",
+      "persona": "F",
+      "title": "Copying a skill never follows symlinks",
+      "expected": "Skill containing a symlink to a secret file: the link is not copied",
+      "channel": "ui+ipc",
+      "notes": [
+        "leak.md (symlink) excluded from the copy plan"
+      ],
+      "status": "pass",
+      "ms": 450,
+      "actual": "leak.md (symlink) excluded from the copy plan",
+      "screenshot": "screenshots/F-10.png"
+    },
+    {
+      "id": "F-runtime",
+      "persona": "F",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "G-01",
+      "persona": "G",
+      "title": "Existing resources are listed without modification",
+      "expected": "Local, symlinked and plugin skills appear; files untouched",
+      "channel": "ui",
+      "notes": [
+        "listing is read-only"
+      ],
+      "status": "pass",
+      "ms": 59,
+      "actual": "listing is read-only",
+      "screenshot": "screenshots/G-01.png"
+    },
+    {
+      "id": "G-02",
+      "persona": "G",
+      "title": "Unfamiliar keys survive every UI write",
+      "expected": "Disable a skill + add an MCP server; unknown settings/.claude.json keys preserved",
+      "channel": "ui",
+      "notes": [
+        "unknown keys + dotfile symlink intact"
+      ],
+      "status": "pass",
+      "ms": 531,
+      "actual": "unknown keys + dotfile symlink intact",
+      "screenshot": "screenshots/G-02.png"
+    },
+    {
+      "id": "G-03",
+      "persona": "G",
+      "title": "Precedence view includes the managed layer",
+      "expected": "Managed wins; layers shown in order",
+      "channel": "ui",
+      "notes": [
+        "managed theme wins"
+      ],
+      "status": "pass",
+      "ms": 66,
+      "actual": "managed theme wins",
+      "screenshot": "screenshots/G-03.png"
+    },
+    {
+      "id": "G-04",
+      "persona": "G",
+      "title": "External change while editing",
+      "expected": "Both the settings editor and MCP wizard refuse to overwrite a concurrent edit",
+      "channel": "ui",
+      "notes": [
+        "settings: conflict detected"
+      ],
+      "status": "pass",
+      "ms": 476,
+      "actual": "settings: conflict detected",
+      "screenshot": "screenshots/G-04.png"
+    },
+    {
+      "id": "G-05",
+      "persona": "G",
+      "title": "Installing over a foreign skill",
+      "expected": "Existing hand-made skill with the same name is not replaced without confirmation",
+      "channel": "ui",
+      "notes": [
+        "hand-made skill protected"
+      ],
+      "status": "pass",
+      "ms": 608,
+      "actual": "hand-made skill protected",
+      "screenshot": "screenshots/G-05.png"
+    },
+    {
+      "id": "G-06",
+      "persona": "G",
+      "title": "Uninstall only the intended resource",
+      "expected": "Removing a project skill leaves the same-named user skill; removing a symlinked skill keeps its target",
+      "channel": "ui+ipc",
+      "notes": [
+        "only intended resources removed"
+      ],
+      "status": "pass",
+      "ms": 15,
+      "actual": "only intended resources removed",
+      "screenshot": "screenshots/G-06.png"
+    },
+    {
+      "id": "G-07",
+      "persona": "G",
+      "title": "TOCTOU: a folder appears between plan and approval",
+      "expected": "Approving must NOT silently replace a skill created after the plan was shown",
+      "channel": "ui",
+      "notes": [
+        "refused: Install failed and was rolled back: The target changed after this plan was reviewed (something was c"
+      ],
+      "status": "pass",
+      "ms": 463,
+      "actual": "refused: Install failed and was rolled back: The target changed after this plan was reviewed (something was c",
+      "screenshot": "screenshots/G-07.png"
+    },
+    {
+      "id": "G-08",
+      "persona": "G",
+      "title": "Stale installation records after the skill disappears",
+      "expected": "Restoring an install-time backup removes the skill; update checks must not count or flag it",
+      "channel": "ui+ipc",
+      "notes": [
+        "no stale pdf record"
+      ],
+      "status": "pass",
+      "ms": 509,
+      "actual": "no stale pdf record",
+      "screenshot": "screenshots/G-08.png"
+    },
+    {
+      "id": "G-09",
+      "persona": "G",
+      "title": "Skill deleted externally while its page is open",
+      "expected": "App shows a graceful error and keeps working",
+      "channel": "ui",
+      "notes": [
+        "no crash after external delete"
+      ],
+      "status": "pass",
+      "ms": 172,
+      "actual": "no crash after external delete",
+      "screenshot": "screenshots/G-09.png"
+    },
+    {
+      "id": "G-runtime",
+      "persona": "G",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "G2-01",
+      "persona": "G2",
+      "title": "Corrupt settings.json",
+      "expected": "Configuration page shows the JSON error; writes refused; other pages still work",
+      "channel": "ui",
+      "notes": [
+        "error shown, write refused, original untouched"
+      ],
+      "status": "pass",
+      "ms": 155,
+      "actual": "error shown, write refused, original untouched",
+      "screenshot": "screenshots/G2-01.png"
+    },
+    {
+      "id": "G2-02",
+      "persona": "G2",
+      "title": "Corrupt ~/.claude.json",
+      "expected": "MCP page tells the user the file is unreadable instead of silently showing nothing",
+      "channel": "ui",
+      "notes": [
+        "warning shown"
+      ],
+      "status": "pass",
+      "ms": 825,
+      "actual": "warning shown",
+      "screenshot": "screenshots/G2-02.png"
+    },
+    {
+      "id": "G2-03",
+      "persona": "G2",
+      "title": "Invalid MCP configuration input",
+      "expected": "Bad URL / missing command / bad name rejected with messages",
+      "channel": "ui+ipc",
+      "notes": [
+        "3 invalid inputs rejected"
+      ],
+      "status": "pass",
+      "ms": 4,
+      "actual": "3 invalid inputs rejected",
+      "screenshot": "screenshots/G2-03.png"
+    },
+    {
+      "id": "G2-04",
+      "persona": "G2",
+      "title": "Unreadable skill folder",
+      "expected": "Listing survives; no crash",
+      "channel": "ui+ipc",
+      "notes": [
+        "listing ok (6 skills)"
+      ],
+      "status": "pass",
+      "ms": 4,
+      "actual": "listing ok (6 skills)",
+      "screenshot": "screenshots/G2-04.png"
+    },
+    {
+      "id": "G2-05",
+      "persona": "G2",
+      "title": "Read-only settings file",
+      "expected": "Save refused with a message; original intact",
+      "channel": "ui+ipc",
+      "notes": [
+        "result ok=false: Error invoking remote method 'skills:setEnabled': Error: /private/var/folders/0v/yd4lc97j1"
+      ],
+      "status": "pass",
+      "ms": 1,
+      "actual": "result ok=false: Error invoking remote method 'skills:setEnabled': Error: /private/var/folders/0v/yd4lc97j1",
+      "screenshot": "screenshots/G2-05.png"
+    },
+    {
+      "id": "G2-runtime",
+      "persona": "G2",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    },
+    {
+      "id": "G3-01",
+      "persona": "G3",
+      "title": "Claude Code CLI not installed",
+      "expected": "Onboarding says \"Not installed\" with guidance; the app remains usable",
+      "channel": "ui",
+      "notes": [
+        "CLI flagged missing with guidance"
+      ],
+      "status": "pass",
+      "ms": 196,
+      "actual": "CLI flagged missing with guidance",
+      "screenshot": "screenshots/G3-01.png"
+    },
+    {
+      "id": "G3-02",
+      "persona": "G3",
+      "title": "Plugin action without the CLI",
+      "expected": "Friendly message naming the Claude Code CLI (not a raw spawn error)",
+      "channel": "ui+ipc",
+      "notes": [
+        "Error invoking remote method 'plugins:action': Error: The Claude Code CLI (`claude`) was not found o"
+      ],
+      "status": "pass",
+      "ms": 2,
+      "actual": "Error invoking remote method 'plugins:action': Error: The Claude Code CLI (`claude`) was not found o",
+      "screenshot": "screenshots/G3-02.png"
+    },
+    {
+      "id": "G3-03",
+      "persona": "G3",
+      "title": "MCP stdio server whose command is missing",
+      "expected": "Diagnostic says the dependency is not available",
+      "channel": "ui+ipc",
+      "notes": [
+        "definitely-not-installed-xyz not found on PATH"
+      ],
+      "status": "pass",
+      "ms": 2,
+      "actual": "definitely-not-installed-xyz not found on PATH",
+      "screenshot": "screenshots/G3-03.png"
+    },
+    {
+      "id": "G3-runtime",
+      "persona": "G3",
+      "title": "no uncaught renderer errors during the journey",
+      "expected": "none",
+      "status": "pass",
+      "actual": "none",
+      "notes": [],
+      "channel": "ui",
+      "ms": 0
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "at": "2026-11-24T20:39:41.359Z",
+  "authenticated": false,
+  "realClaudeUntouched": true,
+  "facts": {
+    "officialSkills": 77,
+    "rateMeter": "GitHub API budget: 54 / 60 requests left (resets 03:09:10).",
+    "sourceRows": [
+      "anthropics/skills official verified just now · e4bb5d9 25 199,892 Re-verify",
+      "anthropics/claude-plugins-official official verified just now · 3de591b 374 48,113 Re-verify",
+      "addyosmani/agent-skills community verified just now · e997ac5 27 120,174 Re-verifyRemove",
+      "obsidianmd/obsidian-skills community verified just now · b110b2f 8 53,640 Re-verifyRemove",
+      "pbakaus/impeccable community verified just now · b49177d 5 116,209 Re-verifyRemove",
+      "remotion-dev/skills community verified just now · a3f4098 14 7,950 Re-verifyRemove"
+    ],
+    "video production": {
+      "category": "Video creation",
+      "total": 128
+    },
+    "development": {
+      "category": "Testing",
+      "total": 6
+    },
+    "productivity": {
+      "category": "Productivity",
+      "total": 16
+    },
+    "design": {
+      "category": "UI/UX design",
+      "total": 7
+    },
+    "mirrorBadge": "+20 mirrors",
+    "impeccableTiles": 4,
+    "resource": "remotion-best-practices",
+    "plan": {
+      "name": "remotion-best-practices",
+      "security": "Review recommended static, advisory only"
+    },
+    "findRepos": 20,
+    "mcpTiles": 15
+  },
+  "results": [
+    {
+      "name": "onboarding is read-only; marketplace auto-verifies the two official sources from real GitHub",
+      "ok": true,
+      "ms": 8594
+    },
+    {
+      "name": "featured sources: add real video, development, productivity and design repositories (verified live)",
+      "ok": true,
+      "ms": 11008
+    },
+    {
+      "name": "video production: real \"Video creation\" resources are discovered, filterable and sorted by repository stars",
+      "ok": true,
+      "ms": 102
+    },
+    {
+      "name": "development: real \"Testing\" resources are discovered, filterable and sorted by repository stars",
+      "ok": true,
+      "ms": 82
+    },
+    {
+      "name": "productivity: real \"Productivity\" resources are discovered, filterable and sorted by repository stars",
+      "ok": true,
+      "ms": 88
+    },
+    {
+      "name": "design: real \"UI/UX design\" resources are discovered, filterable and sorted by repository stars",
+      "ok": true,
+      "ms": 83
+    },
+    {
+      "name": "mirrored skills collapse into one listing with a mirror badge (real impeccable repository)",
+      "ok": true,
+      "ms": 76
+    },
+    {
+      "name": "resource page for a real video skill: live repo stats, docs, files, versions, security explanation",
+      "ok": true,
+      "ms": 320
+    },
+    {
+      "name": "transactional install of a real skill: staged plan with security inspection → approve → verified in the FIXTURE home → backup recorded",
+      "ok": true,
+      "ms": 7539
+    },
+    {
+      "name": "installed state is reflected (resource page, My Skills) and uninstall is backed up and verified",
+      "ok": true,
+      "ms": 408
+    },
+    {
+      "name": "Find repositories on GitHub: live topic search returns unverified candidates with real stars",
+      "ok": true,
+      "ms": 1439
+    },
+    {
+      "name": "MCP registry: real search → resource page with the configuration that would be created → wizard prefilled (nothing written)",
+      "ok": true,
+      "ms": 1566
+    }
+  ]
+}

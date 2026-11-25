@@ -1,0 +1,232 @@
+{
+  "at": "2026-11-24T22:06:51.042Z",
+  "passed": 45,
+  "failed": 0,
+  "results": [
+    {
+      "name": "A: first-run onboarding is read-only and shows detected components",
+      "ok": true,
+      "ms": 4305
+    },
+    {
+      "name": "overview: real counts from fixture + screenshot",
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "name": "A: marketplace discovers skills from (mock) public sources; category filter + search work",
+      "ok": true,
+      "ms": 5732
+    },
+    {
+      "name": "A: resource page shows repo-level stars (not a skill rating), inferred categories with evidence, honest security status, safe docs",
+      "ok": true,
+      "ms": 235
+    },
+    {
+      "name": "A/G: install plan previews exact changes; nothing written until approval; then installs + verified",
+      "ok": true,
+      "ms": 307
+    },
+    {
+      "name": "G: reinstall of an existing skill requires explicit overwrite",
+      "ok": true,
+      "ms": 330
+    },
+    {
+      "name": "F: suspicious repo → high-risk plan, approval required, cancel leaves disk untouched",
+      "ok": true,
+      "ms": 634
+    },
+    {
+      "name": "F: path-traversal archive is rejected and nothing escapes staging",
+      "ok": true,
+      "ms": 270
+    },
+    {
+      "name": "marketplace: plugin entries + MCP registry search → wizard prefilled",
+      "ok": true,
+      "ms": 225
+    },
+    {
+      "name": "G: My Skills lists symlinked + local + installed; all 11 detail tabs render",
+      "ok": true,
+      "ms": 1525
+    },
+    {
+      "name": "G: disable/enable via skillOverrides preserves unknown settings keys (reversible)",
+      "ok": true,
+      "ms": 124
+    },
+    {
+      "name": "B/G: update detection, diff, no silent overwrite of local edits",
+      "ok": true,
+      "ms": 955
+    },
+    {
+      "name": "F: uninstall is confirmed, backed up, recoverable (backup restore)",
+      "ok": true,
+      "ms": 605
+    },
+    {
+      "name": "G: uninstalling a symlinked skill removes only the link",
+      "ok": true,
+      "ms": 161
+    },
+    {
+      "name": "F: MCP list masks secrets everywhere in the renderer",
+      "ok": true,
+      "ms": 72
+    },
+    {
+      "name": "B/F: test connection requires approval, performs real handshake, lists tools, never calls them",
+      "ok": true,
+      "ms": 510
+    },
+    {
+      "name": "F: unreachable remote server is diagnosed, not reported as success",
+      "ok": true,
+      "ms": 11233
+    },
+    {
+      "name": "B: add server via wizard (review step), preserves unrelated keys; edit keeps masked secret; delete with backup",
+      "ok": true,
+      "ms": 947
+    },
+    {
+      "name": "G: external modification between open and save is detected, nothing overwritten",
+      "ok": true,
+      "ms": 401
+    },
+    {
+      "name": "B: register project (explicit), project dashboard + inheritance conflict",
+      "ok": true,
+      "ms": 213
+    },
+    {
+      "name": "B: install into a specific project scope",
+      "ok": true,
+      "ms": 610
+    },
+    {
+      "name": "F15: .mcp.json approval and scope-override states follow the documented rules (project keyed by a non-real path)",
+      "ok": true,
+      "ms": 133
+    },
+    {
+      "name": "F16: same-name skills follow documented precedence; plugin skills are namespaced; plan warns before installing a clash",
+      "ok": true,
+      "ms": 849
+    },
+    {
+      "name": "F18: hooks from every documented source, with policy/trust state; a managed lock is reflected live",
+      "ok": true,
+      "ms": 305
+    },
+    {
+      "name": "B: custom agent create + edit with backup; hooks flagged",
+      "ok": true,
+      "ms": 485
+    },
+    {
+      "name": "commands + plugins pages",
+      "ok": true,
+      "ms": 73
+    },
+    {
+      "name": "D: Skill Studio create (template) → validate → save → discoverable; invalid blocks save; diff; tests",
+      "ok": true,
+      "ms": 1757
+    },
+    {
+      "name": "D: edit existing skill in Studio shows diff; export path validated; import/export roundtrip of local skill",
+      "ok": true,
+      "ms": 352
+    },
+    {
+      "name": "E: connect catalog (HTTPS/localhost only), pinned resources, checksum enforced, install, presets",
+      "ok": true,
+      "ms": 433
+    },
+    {
+      "name": "C/E: presets reviewed plan reports missing items honestly; custom preset saved",
+      "ok": true,
+      "ms": 501
+    },
+    {
+      "name": "C: individual skill from multi-skill community source (add source) installs alone",
+      "ok": true,
+      "ms": 86
+    },
+    {
+      "name": "F: security scan flags risky content advisory-only; hooks warnings",
+      "ok": true,
+      "ms": 104
+    },
+    {
+      "name": "G: config editor — diff review, atomic save with backup, unknown keys kept, conflict + managed read-only + inheritance",
+      "ok": true,
+      "ms": 820
+    },
+    {
+      "name": "F/G: crash recovery UI rolls back an incomplete transaction",
+      "ok": true,
+      "ms": 134
+    },
+    {
+      "name": "activity log records operations; settings theme + welcome",
+      "ok": true,
+      "ms": 210
+    },
+    {
+      "name": "REVIEW P0: editing a skill that has binary/large/odd files never corrupts or deletes them; explicit delete only removes that file",
+      "ok": true,
+      "ms": 705
+    },
+    {
+      "name": "REVIEW P0: dotfile-managed (symlinked) settings.json stays a symlink through every write",
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "name": "REVIEW P0: process-starting actions need the system dialog; renderer-supplied approval is not enough",
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "name": "REVIEW P0: previews cannot read through symlinks; agents reject frontmatter injection; strict CSP",
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "name": "keyboard: ⌘K palette navigates; tab order reaches controls",
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "name": "security: renderer isolated; IPC rejects unknown channels, arbitrary paths, traversal, non-https links",
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "name": "layouts at multiple desktop sizes have no horizontal overflow",
+      "ok": true,
+      "ms": 759
+    },
+    {
+      "name": "accessibility (axe): no critical violations on primary pages",
+      "ok": true,
+      "ms": 3058
+    },
+    {
+      "name": "offline: cached marketplace still browsable and local management works; refresh fails gracefully",
+      "ok": true,
+      "ms": 186
+    },
+    {
+      "name": "real system: detection + listing of the actual ~/.claude is read-only",
+      "ok": true,
+      "ms": 5971
+    }
+  ]
+}

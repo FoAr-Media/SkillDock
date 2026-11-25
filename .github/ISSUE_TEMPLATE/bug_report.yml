@@ -1,0 +1,12 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes: { value: "Security problems: do NOT file them here; follow SECURITY.md. Never paste tokens or config files containing secrets." }
+  - { type: input, id: version, attributes: { label: App version, placeholder: 0.2.1 }, validations: { required: true } }
+  - { type: input, id: os, attributes: { label: OS and architecture, placeholder: macOS 15 arm64 }, validations: { required: true } }
+  - { type: input, id: claude, attributes: { label: Claude Code version (claude --version) } }
+  - { type: textarea, id: steps, attributes: { label: Steps to reproduce }, validations: { required: true } }
+  - { type: textarea, id: expected, attributes: { label: Expected behaviour }, validations: { required: true } }
+  - { type: textarea, id: actual, attributes: { label: Actual behaviour (screenshots welcome; remove personal paths) }, validations: { required: true } }
